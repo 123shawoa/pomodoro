@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta charset="UTF-8">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="session-label">Work Session</h1>
+
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div id="timer">25:00</div>
+
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <h2>Pomodoros Completed: <span id="pomodoro-count">0</span></h2>
+
+        <audio id="alarm-sound" src="{{ url_for('static', filename='ding.mp3') }}"></audio>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

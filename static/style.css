@@ -1,0 +1,96 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#session-label {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.5s ease;
+}
+
+#progress-container {
+    width: 100%;
+    background-color: #eee;
+    height: 12px;
+    border-radius: 6px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 1s linear;
+}
+
+#timer {
+    font-size: 64px;
+    font-weight: bold;
+    color: #222;
+    margin: 20px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#pomodoro-count {
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 30px;
+}
+
+/* Fade animation for session switch */
+.fade {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Break Session Styling */
+.break-session {
+    color: #2196f3;
+}
+
